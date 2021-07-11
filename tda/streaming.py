@@ -342,6 +342,8 @@ class StreamClient(EnumEnforcer):
                         # This allows for both sync and async handlers
                         if inspect.isawaitable(h):
                             asyncio.ensure_future(h)
+                        
+                        return h
 
         # notify
         if 'notify' in msg:
