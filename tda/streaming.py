@@ -1029,6 +1029,34 @@ class StreamClient(EnumEnforcer):
             symbols, 'OPTION', 'SUBS', self.LevelOneOptionFields,
             fields=fields)
 
+    async def level_one_option_add(self, symbols):
+        '''
+        `Official documentation <https://developer.tdameritrade.com/content/
+        streaming-data#_Toc504640588>`__
+
+        Add a symbol to the level one option subscription. Behavior is undefined
+        if called before :meth:`level_one_option_subs`.
+
+        :param symbols: Option symbols to add to the subscription.
+        '''
+        await self._service_op(
+            symbols, 'OPTION', 'ADD', self.LevelOneOptionFields,
+            fields=self.LevelOneOptionFields.all_fields())
+
+    async def level_one_option_unsubs(self, symbols):
+        '''
+        `Official documentation <https://developer.tdameritrade.com/content/
+        streaming-data#_Toc504640588>`__
+
+        Remove a symbol from the level one option subscription. Behavior is undefined
+        if called before :meth:`level_one_option_subs`.
+
+        :param symbols: Option symbols to remove from the subscription.
+        '''
+        await self._service_op(
+            symbols, 'OPTION', 'UNSUBS', self.LevelOneOptionFields,
+            fields=self.LevelOneOptionFields.all_fields())
+
     def add_level_one_option_handler(self, handler):
         '''
         Register a function to handle level one options quotes as they are sent.
