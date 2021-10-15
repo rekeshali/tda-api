@@ -154,8 +154,7 @@ the login flow. If it fails, it will fall back to the manual login flow:
 
 This script is installed by ``pip``, and will only be accessible if you've added
 pip's executable locations to your ``$PATH``. If you're having a hard time, feel
-free to ask for help on our `Discord server 
-<https://discord.gg/nfrd9gh>`__.
+free to ask for help on our `Discord server <https://discord.gg/BEr6y6Xqyv>`__.
 
 
 ----------------------
@@ -214,7 +213,7 @@ incorrectly. Go back to your `application list
 <https://developer.tdameritrade.com/user/me/apps>`__ and copy-paste the 
 information again. Don't manually type it out, don't visually spot-check it. 
 Copy-paste it. Make sure to include details like trailing slashes, ``https`` 
-protol specifications, and port numbers. 
+protocol specifications, and port numbers. 
 
 Note ``tda-api`` *does not* require you to suffix your client ID with 
 ``@AMER.OAUTHAP``. It will accept it if you do so, but if you make even the 

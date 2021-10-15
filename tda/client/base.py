@@ -171,7 +171,7 @@ class BaseClient(EnumEnforcer):
 
         if from_entered_datetime is None:
             from_entered_datetime = datetime.datetime(
-                year=1900, month=1, day=1)
+                year=1971, month=1, day=1)
         if to_entered_datetime is None:
             to_entered_datetime = datetime.datetime.utcnow()
 
@@ -769,8 +769,7 @@ class BaseClient(EnumEnforcer):
         :param start_datetime: Start date.
         :param end_datetime: End date. Default is previous trading day.
         :param need_extended_hours_data: If true, return extended hours data.
-                                         Otherwise return regular market hours
-                                         only.
+                                         Default is true.
         '''
         period_type = self.convert_enum(
             period_type, self.PriceHistory.PeriodType)

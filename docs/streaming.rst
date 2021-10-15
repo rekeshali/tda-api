@@ -30,7 +30,7 @@ run this outside regular trading hours you may not see anything):
   client = easy_client(
           api_key='APIKEY',
           redirect_uri='https://localhost',
-          token_path='/tmp/token.pickle')
+          token_path='/tmp/token.json')
   stream_client = StreamClient(client, account_id=1234567890)
 
   async def read_stream():
@@ -490,16 +490,17 @@ Equity Trades
 .. automethod:: tda.streaming::StreamClient.timesale_equity_subs
 .. automethod:: tda.streaming::StreamClient.add_timesale_equity_handler
 
---------------
-Futures Trades
---------------
+--------------------------
+Futures and Options Trades
+--------------------------
+
+These streams are defined and will connect, however it appears that they do 
+not provide data. Connecting to these results in heartbeat messages that indicate
+that the stream is open, but to date we haven't seen any data be passed throug.
+We currently believe this is an issue on TDA's side. 
 
 .. automethod:: tda.streaming::StreamClient.timesale_futures_subs
 .. automethod:: tda.streaming::StreamClient.add_timesale_futures_handler
-
---------------
-Options Trades
---------------
 
 .. automethod:: tda.streaming::StreamClient.timesale_options_subs
 .. automethod:: tda.streaming::StreamClient.add_timesale_options_handler
@@ -575,7 +576,7 @@ please note that these are best effort explanations resulting from reverse
 engineering and crowdsourced experience. Take them with a grain of salt. 
 
 If you have specific questions, please join our `Discord server 
-<https://discord.gg/nfrd9gh>`__ to discuss with the community.
+<https://discord.gg/BEr6y6Xqyv>`__ to discuss with the community.
 
 
 -------------------------------------------------------------------------------
