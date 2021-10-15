@@ -32,7 +32,7 @@ setuptools.setup(
     install_requires=[
         'authlib',
         'autopep8',
-        'httpx<=0.18.1',
+        'httpx<=0.20.0',
         'prompt_toolkit',
         'python-dateutil',
         'selenium', 
