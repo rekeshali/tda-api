@@ -16,7 +16,7 @@ setuptools.setup(
     description='An unofficial wrapper around the TD Ameritrade HTTP API.',
     long_description=long_description,
     long_description_content_type='text/x-rst',
-    url='https://github.com/alexgolec/tda-api',
+    url='https://github.com/rekeshali/tda-api',
     packages=setuptools.find_packages(),
     classifiers=[
         'Programming Language :: Python :: 3',
