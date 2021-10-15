@@ -9,7 +9,7 @@ with open('tda/version.py', 'r') as f:
     version = version[1:-1]
 
 setuptools.setup(
-    name='tda-api',
+    name='tda-api-fork',
     version=version,
     author='Alex Golec',
     author_email='bottomless.septic.tank@gmail.com',
