@@ -9,14 +9,14 @@ with open('tda/version.py', 'r') as f:
     version = version[1:-1]
 
 setuptools.setup(
-    name='tda-api',
+    name='tda-api-fork',
     version=version,
     author='Alex Golec',
     author_email='bottomless.septic.tank@gmail.com',
     description='An unofficial wrapper around the TD Ameritrade HTTP API.',
     long_description=long_description,
     long_description_content_type='text/x-rst',
-    url='https://github.com/alexgolec/tda-api',
+    url='https://github.com/rekeshali/tda-api-fork',
     packages=setuptools.find_packages(),
     classifiers=[
         'Programming Language :: Python :: 3',
